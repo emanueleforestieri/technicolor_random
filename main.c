@@ -37,4 +37,3 @@ void main()
       		printf("%s\n",s);	
 	}
 }
-
