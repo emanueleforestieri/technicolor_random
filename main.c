@@ -5,7 +5,7 @@
 unsigned short verifica(unsigned char *s,unsigned char c)
 {
     unsigned short n;
-	while(*s)
+    while(*s)
 		if(*(s++)==c)
 			n++;
 	return n;
