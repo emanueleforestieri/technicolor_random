@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-unsigned short verifica(unsigned char *s,unsigned char c)
+unsigned short verifica(unsigned char *s,unsigned char c)//verifica e conta i caratteri esadecimali uguali
 {
   unsigned short n;
   while(*s)
@@ -10,7 +10,7 @@ unsigned short verifica(unsigned char *s,unsigned char c)
       n++;
   return n;
 }
-bool controlla(unsigned char *s,unsigned char *c,unsigned short start,unsigned short end,unsigned short q)
+bool controlla(unsigned char *s,unsigned char *c,unsigned short start,unsigned short end,unsigned short q)//controllo caratteri esadecimali uguali
 {
   bool t=1;
   for(unsigned short i=start;i!=end;i++)
@@ -21,7 +21,7 @@ bool controlla(unsigned char *s,unsigned char *c,unsigned short start,unsigned s
     }
   return t;
 }
-bool tripli(unsigned char *s,unsigned char *c)
+bool tripli(unsigned char *s,unsigned char *c)//controllo caratteri esadecimali presenti più di 2 volte consecutivamente 
 {
   bool t=1;
   while(*s)
@@ -33,7 +33,7 @@ bool tripli(unsigned char *s,unsigned char *c)
       }
   return t;
 }
-unsigned short cinque(unsigned char *s,unsigned char *c)
+unsigned short cinque(unsigned char *s,unsigned char *c)//controllo caratteri alfabetici presenti più di 5 volte 
 {
   unsigned short n;
   while(*s)
@@ -46,7 +46,7 @@ unsigned short cinque(unsigned char *s,unsigned char *c)
   }
   return n;   
 }
-void genera(unsigned char *s,unsigned char *c)
+void genera(unsigned char *s,unsigned char *c)//generazione random stringa
 {
   for(unsigned short i=0;i!=10;i++)
     *(s+i)=*(c+rand()%+16);
