@@ -7,9 +7,8 @@ unsigned short verifica(unsigned char *s,unsigned char c)
     unsigned short n=0;
     while(*s)
     {
-        if(*s==c)
+        if(*(s++)==c)
             n++;
-        s++;
     }
     return n;
 }
@@ -28,8 +27,8 @@ bool tripli(unsigned char *s,unsigned char *c)
 {
     bool t=1;
     while(*s)
-        if(*s==*(s++))
-            if(*s==*(s++))
+        if(*(s++)==*s)
+            if(*(s++)==*s)
             {
                 t=0;
                 break;
