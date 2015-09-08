@@ -1,3 +1,6 @@
+# 0.2.1 [08/09/2015]
+ - Corretti bug
+
 # 0.2 [06/09/2015]
  - Aggiunto controllo sui caratteri alfabetici presenti più di 5 volte
  - Aggiunto controllo sui caratteri esadecimali presenti più di 2 volte consecutivamente
