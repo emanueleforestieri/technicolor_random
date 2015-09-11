@@ -1,3 +1,9 @@
+# 0.3.1 [11/09/2015]
+ - Aggiornata la grafica
+ - Ottimizzato il codice
+ - Aggiunta scelta quantità di password in stdin
+ - Aggiunti controlli in stdin
+
 # 0.3 [11/09/2015]
  - Ottimizzato il codice
  - Maggiore compatibilità
