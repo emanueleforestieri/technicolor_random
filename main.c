@@ -71,7 +71,7 @@ unsigned short cinque(unsigned char *s,unsigned char *c)//controlla caratteri
     unsigned short n=0;
     while(*s)
     {
-        c+=9;
+        c+=10;
         while(*c)
             if(*s==*(c++))
                 n++;
