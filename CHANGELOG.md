@@ -1,3 +1,8 @@
+# 0.3 [11/09/2015]
+ - Ottimizzato il codice
+ - Maggiore compatibilità
+ - Corretti bug
+
 # 0.2.1 [08/09/2015]
  - Corretti bug
 
