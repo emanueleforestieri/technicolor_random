@@ -4,6 +4,7 @@
  - Aggiunta scelta quantità di password in stdin
  - Aggiunti controlli in stdin
  - Aggiunti commenti
+ - Corretti bug
 
 # 0.3 [11/09/2015]
  - Ottimizzato il codice
