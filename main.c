@@ -20,8 +20,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <time.h>
 #include <string.h>
+#include <time.h>
 #define ULONG_MAX 4294967295
 void help()//visualizza l'helper 
 {
