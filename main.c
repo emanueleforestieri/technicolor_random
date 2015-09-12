@@ -106,9 +106,11 @@ int main(int argc, char **argv)
 
     for(; passcnt<npass; passcnt++)
 			#ifndef BENCHMARK
-            printf("%s\n", generapass(pass))
+            printf("%s\n", generapass(pass));
+			#else
+			generapass(pass);
 			#endif
-			;
+			
 
     return EXIT_SUCCESS;
 }

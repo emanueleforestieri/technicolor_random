@@ -1,3 +1,6 @@
+# 0.4.1 [12/09/2015]
+ - Risolto bug con il benchmark
+
 # 0.4 [12/09/2015]
  - Migliorati commenti
  - Migliorato codice
