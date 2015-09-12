@@ -105,11 +105,11 @@ int main(int argc, char **argv)
 	srand(time(NULL));
 
 	for(; passcnt<npass; passcnt++)
-			#ifndef BENCHMARK
-			printf("%s\n", generapass(pass));
-			#else
-			generapass(pass);
-			#endif	
+		#ifndef BENCHMARK
+		printf("%s\n", generapass(pass));
+		#else
+		generapass(pass);
+		#endif	
 
 	return EXIT_SUCCESS;
 }
