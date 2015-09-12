@@ -1,3 +1,15 @@
+# 0.4.2 [12/09/2015]
+ - Risolto bug con gcc e -O1/-O2/-O3
+
+# 0.4.1 [12/09/2015]
+ - Risolto bug con il benchmark
+
+# 0.4 [12/09/2015]
+ - Migliorati commenti
+ - Migliorato codice
+ - Errori su stderr
+ - Velocizzato
+ 
 # 0.3.1 [11/09/2015]
  - Aggiornata la grafica
  - Ottimizzato il codice
