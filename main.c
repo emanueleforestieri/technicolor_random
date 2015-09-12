@@ -18,8 +18,6 @@
  * MA 02110-1301, USA.
  */
 
-/*TODO: Wtf non funziona con -O1/-O2/-O3*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
