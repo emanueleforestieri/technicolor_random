@@ -79,7 +79,7 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 	for(short i=0; i<10; i++)
 		if ((pass[i]>='A')&&(pass[i]<='F'))
 			caratteriAF++;
-		if(caratteriAF>5)
+	if(caratteriAF>5)
 			goto nuovapass;
 
 	return pass;
