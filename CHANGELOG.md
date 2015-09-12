@@ -1,3 +1,9 @@
+# 0.4 [12/09/2015]
+ - Migliorati commenti
+ - Migliorato codice
+ - Errori su stderr
+ - Velocizzato
+ 
 # 0.3.1 [11/09/2015]
  - Aggiornata la grafica
  - Ottimizzato il codice
