@@ -16,4 +16,4 @@ Il programma prende da stdin il numero di password da calcolare, quindi restitui
  * Se si salvano le password in un file, la dimensione sarà di npassword*11 byte (10 char per password+\n)
   
   
-Aggiornamenti: [GitHub] (https://github.com/emanueleforestieri/linux_update/) 
+Aggiornamenti: [GitHub] (https://github.com/emanueleforestieri/) 
