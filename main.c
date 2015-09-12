@@ -40,7 +40,6 @@ static inline short contac(register char *s,  char c) /*conta quante volte c è 
 	return n;
 }
 
-
 static inline char *generapass(char *pass) /*mette in pass una password valida e restituisce il suo indirizzo*/
 {
 
@@ -110,8 +109,7 @@ int main(int argc, char **argv)
 			printf("%s\n", generapass(pass));
 			#else
 			generapass(pass);
-			#endif
-			
+			#endif	
 
 	return EXIT_SUCCESS;
 }
