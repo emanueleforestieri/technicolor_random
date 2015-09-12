@@ -1,3 +1,6 @@
+# 0.4.2 [12/09/2015]
+ - Risolto bug con gcc e -O1/-O2/-O3
+
 # 0.4.1 [12/09/2015]
  - Risolto bug con il benchmark
 

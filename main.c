@@ -32,15 +32,15 @@ const char caratteri[]="0123456789ABCDEF"; /*caratteri utilizzabili in una passw
 
 void ehelp(char *nome) 
 {
-    fprintf(stderr, "Uso: %s numero_di_password\n", nome);
+	fprintf(stderr, "Uso: %s numero_di_password\n", nome);
 	exit(EXIT_FAILURE);
 }
 
 static inline short contac(register char *s,  char c) /*conta quante volte c è nella stringa s*/
 {
-    short n=0;
-    while(*s) if(*s++==c) n++;
-    return n;
+	short n=0;
+	while(*s) if(*s++==c) n++;
+	return n;
 }
 
 
@@ -57,10 +57,15 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 	/*Verifica della password generata*/
 
 	/*Non possono esserci più di due caratteri uguali consecutivi*/		    
-	for(short i=0; i<8;)
-    	if(pass[i]==pass[++i]) /*warning: operation on ‘i’ may be undefined [-Wsequence-point]*/
-			if(pass[i]==pass[++i])
+	for(short i=0; i<8; i++)
+	{
+		if(pass[i]==pass[i+1])
+		{
+			i++;
+			if(pass[i]==pass[i+1])
 				goto nuovapass;
+		}
+	}
 	
 	/*Non possono esserci più di tre caratteri A-F uguali*/
 	for(short i=10; i<16; i++) /*caratteri[10..15] sono A..F*/
@@ -87,11 +92,11 @@ int main(int argc, char **argv)
 {
 	#define help() ehelp(*argv)
 	
-    unsigned long long passcnt=0, npass;
+	unsigned long long passcnt=0, npass;
 	char pass[10+1]="xxxxxxxxxx";
 	
-    if (argc!=2)
-        help();
+	if (argc!=2)
+		help();
 	if (!strncmp(argv[1], "-h", 2) || !strncmp(argv[1], "--help", 6) || !strncmp(argv[1], "-?", 2))
 		help();
 
@@ -102,15 +107,15 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	
-    srand(time(NULL));
+	srand(time(NULL));
 
-    for(; passcnt<npass; passcnt++)
+	for(; passcnt<npass; passcnt++)
 			#ifndef BENCHMARK
-            printf("%s\n", generapass(pass));
+			printf("%s\n", generapass(pass));
 			#else
 			generapass(pass);
 			#endif
 			
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
