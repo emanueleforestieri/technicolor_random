@@ -26,7 +26,6 @@
 #include <string.h>
 #include <time.h>
 #include <errno.h>
-#include <limits.h>
 
 const char caratteri[]="0123456789ABCDEF"; /*caratteri utilizzabili in una password*/
 
@@ -54,7 +53,7 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 	for(short i=0; i<10; i++) /*pass[10] deve essere '\0', non va modificato!*/
 		pass[i]=caratteri[rand()%16]; /*TODO: collo di bottiglia?*/
 
-	/*Verifica della password generata*/
+	/*Verifica della password generata, FUNZIONI ORDINATE PER VELOCITÀ*/
 
 	/*Non possono esserci più di due caratteri uguali consecutivi*/		    
 	for(short i=0; i<8; i++)
