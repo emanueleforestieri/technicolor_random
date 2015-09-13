@@ -68,9 +68,9 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 		if(contac(pass, caratteri[i])>3)
 			goto nuovapass;
 
-	/*Non possono esserci più di due numeri uguali*/
+	/*Non possono esserci più di tre numeri uguali*/
 	for(short i=0; i<10; i++)
-		if(contac(pass, caratteri[i])>2)
+		if(contac(pass, caratteri[i])>3)
 			goto nuovapass;
 	
 	/*Non possono esserci più di 5 caratteri A-F*/
