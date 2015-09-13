@@ -1,3 +1,7 @@
+# 0.5 [13/09/2015]
+ - Aggiornati algoritmi 
+ - Risolti bug 
+
 # 0.4.2 [12/09/2015]
  - Risolto bug con gcc e -O1/-O2/-O3
 
