@@ -1,3 +1,8 @@
+# 0.6 [24/09/2015]
+ - Migliorato codice
+ - Migliorata grafica
+ - Ottimizzato 
+
 # 0.5 [13/09/2015]
  - Aggiornati algoritmi 
  - Risolti bug 
