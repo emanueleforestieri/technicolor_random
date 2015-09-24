@@ -63,13 +63,8 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 		}
 	}
 	
-	/*Non possono esserci più di tre caratteri A-F uguali*/
-	for(short i=10; i<16; i++) /*caratteri[10..15] sono A..F*/
-		if(contac(pass, caratteri[i])>3)
-			goto nuovapass;
-
-	/*Non possono esserci più di tre numeri uguali*/
-	for(short i=0; i<10; i++)
+	/*Non possono esserci più di tre caratteri uguali*/
+	for(short i=0; i<16; i++)
 		if(contac(pass, caratteri[i])>3)
 			goto nuovapass;
 	
