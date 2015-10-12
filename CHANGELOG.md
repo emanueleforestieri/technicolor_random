@@ -1,46 +1,46 @@
 # 0.6 [24/09/2015]
- - Migliorato codice
- - Migliorata grafica
- - Ottimizzato 
+ - Improved code
+ - Improved graphics
+ - Optimized
 
 # 0.5 [13/09/2015]
- - Aggiornati algoritmi 
- - Risolti bug 
+ - Updated algorithms
+ - Fixed bug
 
 # 0.4.2 [12/09/2015]
- - Risolto bug con gcc e -O1/-O2/-O3
+ - Fixed bug with gcc -O1/-O2/-O3
 
 # 0.4.1 [12/09/2015]
- - Risolto bug con il benchmark
+ - Fixed bug with the benchmark
 
 # 0.4 [12/09/2015]
- - Migliorati commenti
- - Migliorato codice
- - Errori su stderr
- - Velocizzato
+ - Improved comments
+ - Improved code
+ - Errors stderr
+ - Faster
  
 # 0.3.1 [11/09/2015]
- - Aggiornata la grafica
- - Ottimizzato il codice
- - Aggiunta scelta quantità di password in stdin
- - Aggiunti controlli in stdin
- - Aggiunti commenti
- - Corretti bug
+ - Updated graphics
+ - Optimized code
+ - Added choice of passwords in stdin
+ - Added checks in stdin
+ - Added comments
+ - Fixed bug
 
 # 0.3 [11/09/2015]
- - Ottimizzato il codice
- - Maggiore compatibilità
- - Corretti bug
+ - Optimized code
+ - Increased compatibility
+ - Fixed bug
 
 # 0.2.1 [08/09/2015]
- - Corretti bug
+ - Fixed bug
 
 # 0.2 [06/09/2015]
- - Aggiunto controllo sui caratteri alfabetici presenti più di 5 volte
- - Aggiunto controllo sui caratteri esadecimali presenti più di 2 volte consecutivamente
+ - Added control over alphabetical characters are more than 5 times
+ - Added control over hex characters are more than two times consecutively
 
 # 0.1 [05/09/2015]
- - Release iniziale
- - Aggiunta lunghezza di 10 caratteri esadecimali
- - Aggiunto controllo sui numeri uguali presenti più di 2 volte
- - Aggiunto controllo sui caratteri alfabetici uguali presenti più di 3 volte
+ - Initial release
+ - Added length of 10 hexadecimal characters
+ - Added control numbers equal no more than 2 times
+ - Added control over alphabetic characters equal more than 3 times
