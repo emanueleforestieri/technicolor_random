@@ -1,21 +1,21 @@
 # technicolor_random #
 
-Generatore di password casuali per router technicolor
+Random password generator for technicolor routers
 
-## Compilazione ##
+## Compilation ##
 
-Se si usa gcc, usare il parametro -std=c99
+When using gcc, use the parameter -std=c99 
 
 ## Input/Output ##
 
-Il programma prende da stdin il numero di password da calcolare, quindi restituisce su stdout le password e su stderr gli errori.
+The program takes from stdin the number of passwords to be calculated, then returns password on stdout and errors on stderr.
 
-## Limiti ##
+## Limits ##
 
- * Possono essere calcolate al massimo ULONG_LONG_MAX password (vedere limits.h)
- * Se si salvano le password in un file, la dimensione sarà di npassword*11 byte (10 char per password+\n)
+ * Can be calculated at the maximum ULONG_LONG_MAX passwords (see limits.h)
+ * If you save your password in a file, the size will be npassword * 11 bytes (10 char password to + \n)
   
   
-Aggiornamenti: [GitHub] (https://github.com/emanueleforestieri/technicolor_random)
+Updates: [GitHub] (https://github.com/emanueleforestieri/technicolor_random)
 
-Donazioni: [Paypal] (https://www.paypal.me/emanueleforestieri)
+Donations: [Paypal] (https://www.paypal.me/emanueleforestieri)
