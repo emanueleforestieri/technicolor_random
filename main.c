@@ -25,7 +25,7 @@
 #include <time.h>
 #include <errno.h>
 
-const char caratteri[]="0123456789ABCDEF"; /*caratteri utilizzabili in una password*/
+const char caratteri[]="0123456789ABCDEF"; /*usable characters in a password*/
 
 void ehelp(char *nome) 
 {
@@ -33,26 +33,26 @@ void ehelp(char *nome)
 	exit(EXIT_FAILURE);
 }
 
-static inline short contac(register char *s,  char c) /*conta quante volte c è nella stringa s*/
+static inline short contac(register char *s,  char c) /*count how many times there is in the string s*/
 {
 	short n=0;
 	while(*s) if(*s++==c) n++;
 	return n;
 }
 
-static inline char *generapass(char *pass) /*mette in pass una password valida e restituisce il suo indirizzo*/
+static inline char *generapass(char *pass) /*It puts pass a valid password and returns its address*/
 {
 
-	short caratteriAF; /*contatore*/
+	short caratteriAF; /*counter*/
 
-	/*generazione stringa casuale*/
+	/*generating random string*/
 	nuovapass:;
-	for(short i=0; i<10; i++) /*pass[10] deve essere '\0', non va modificato!*/
+	for(short i=0; i<10; i++) /*pass[10] has to be '\0', should not be changed!*/
 		pass[i]=caratteri[rand()%16]; /*TODO: collo di bottiglia?*/
 
-	/*Verifica della password generata, FUNZIONI ORDINATE PER VELOCITÀ*/
+	/*Check the generated password, FUNCTIONS ORDER FOR SPEED*/
 
-	/*Non possono esserci più di due caratteri uguali consecutivi*/		    
+	/*There can be no more than two consecutive identical characters*/		    
 	for(short i=0; i<8; i++)
 	{
 		if(pass[i]==pass[i+1])
@@ -63,12 +63,12 @@ static inline char *generapass(char *pass) /*mette in pass una password valida e
 		}
 	}
 	
-	/*Non possono esserci più di tre caratteri uguali*/
+	/*There can be no more than three identical characters*/
 	for(short i=0; i<16; i++)
 		if(contac(pass, caratteri[i])>3)
 			goto nuovapass;
 	
-	/*Non possono esserci più di 5 caratteri A-F*/
+	/*There can be no more than 5 characters A-F*/
 	caratteriAF=0;
 	for(short i=0; i<10; i++)
 		if((pass[i]>='A')&&(pass[i]<='F'))
