@@ -1,3 +1,8 @@
+# 0.7 [16/10/2015]
+ - Improved code 
+ - Optimized
+ - fully translated into english language
+ 
 # 0.6 [24/09/2015]
  - Improved code
  - Improved graphics
