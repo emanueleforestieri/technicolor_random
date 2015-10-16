@@ -25,11 +25,11 @@
 #include <time.h>
 #include <errno.h>
 
-const char caratteri[]="0123456789ABCDEF"; /*usable characters in a password*/
+const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
 
-void ehelp(char *nome) 
+void ehelp(char *name) 
 {
-	fprintf(stderr, "Uso: %s numero_di_password\n", nome);
+	fprintf(stderr, "Uso: %s [password_number]\n", name);
 	exit(EXIT_FAILURE);
 }
 
@@ -40,15 +40,15 @@ static inline short contac(register char *s,  char c) /*count how many times the
 	return n;
 }
 
-static inline char *generapass(char *pass) /*It puts pass a valid password and returns its address*/
+static inline char *generatepass(char *pass) /*It puts pass a valid password and returns its address*/
 {
 
-	short caratteriAF; /*counter*/
+	short charactersAF; /*counter*/
 
 	/*generating random string*/
-	nuovapass:;
+	newpass:;
 	for(short i=0; i<10; i++) /*pass[10] has to be '\0', should not be changed!*/
-		pass[i]=caratteri[rand()%16]; /*TODO: collo di bottiglia?*/
+		pass[i]=characters[rand()%16]; /*TODO: collo di bottiglia?*/
 
 	/*Check the generated password, FUNCTIONS ORDER FOR SPEED*/
 
@@ -59,22 +59,22 @@ static inline char *generapass(char *pass) /*It puts pass a valid password and r
 		{
 			i++;
 			if(pass[i]==pass[i+1])
-				goto nuovapass;
+				goto newpass;
 		}
 	}
 	
 	/*There can be no more than three identical characters*/
 	for(short i=0; i<16; i++)
-		if(contac(pass, caratteri[i])>3)
-			goto nuovapass;
+		if(contac(pass, characters[i])>3)
+			goto newpass;
 	
 	/*There can be no more than 5 characters A-F*/
-	caratteriAF=0;
+	charactersAF=0;
 	for(short i=0; i<10; i++)
 		if((pass[i]>='A')&&(pass[i]<='F'))
-			caratteriAF++;
-	if(caratteriAF>5)
-		goto nuovapass;
+			charactersAF++;
+	if(charactersAF>5)
+		goto newpass;
 	return pass;
 }
 
@@ -90,10 +90,10 @@ int main(int argc, char **argv)
 	if (!strncmp(argv[1], "-h", 2) || !strncmp(argv[1], "--help", 6) || !strncmp(argv[1], "-?", 2))
 		help();
 
-	npass=strtoull(argv[1],NULL,0); /*atoi*/
+	npass=strtoull(argv[1],NULL,0); /*ascii to unsigned long long*/
 	if(errno)
 	{
-		perror("Errore nella conversione del numero di password da stringa a ulong, strtoull()");
+		perror("Error in the conversion of the number of password from string to ulong, strtoull()");
 		exit(EXIT_FAILURE);
 	}
 	
@@ -101,9 +101,9 @@ int main(int argc, char **argv)
 
 	for(; passcnt<npass; passcnt++)
 		#ifndef BENCHMARK
-		printf("%s\n", generapass(pass));
+		printf("%s\n", generatepass(pass));
 		#else
-		generapass(pass);
+		generatepass(pass);
 		#endif	
 
 	return EXIT_SUCCESS;
