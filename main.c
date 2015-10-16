@@ -20,7 +20,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
 #include <time.h>
 #include <errno.h>
@@ -29,7 +28,7 @@ const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
 
 void ehelp(char *name) 
 {
-	fprintf(stderr, "Uso: %s [password_number]\n", name);
+	fprintf(stderr, "Use: %s [password_number]\n", name);
 	exit(EXIT_FAILURE);
 }
 
