@@ -2,8 +2,9 @@
  - Updated algorithms
  - Fixed bugs
  - Optimized
- - Improved code
  - Faster
+ - Improved comments
+ - Improved code
 
 # 0.7 [16/10/2015]
  - Improved code 
