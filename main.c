@@ -75,6 +75,7 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 	}
 	if((charactersAF>5)||(numbers>9))
 		goto newpass;
+		
 	return pass;
 }
 
