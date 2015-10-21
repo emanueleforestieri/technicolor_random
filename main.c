@@ -21,7 +21,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include <errno.h>
 
 const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
@@ -41,8 +40,6 @@ static inline short contac(register char *s,  char c) /*count how many times the
 
 static inline char *generatepass(char *pass) /*It puts pass a valid password and returns its address*/
 {
-
-	short charactersAF; /*counter*/
 
 	/*generating random string*/
 	newpass:;
@@ -68,11 +65,15 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 			goto newpass;
 	
 	/*There can be no more than 5 characters A-F*/
-	charactersAF=0;
+	short charactersAF=0,numbers=0;
 	for(short i=0; i<10; i++)
+	{
 		if((pass[i]>='A')&&(pass[i]<='F'))
 			charactersAF++;
-	if(charactersAF>5)
+		else
+			numbers++;
+	}
+	if((charactersAF>5)||(numbers>9))
 		goto newpass;
 	return pass;
 }
