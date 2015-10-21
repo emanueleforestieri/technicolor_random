@@ -1,3 +1,10 @@
+# 0.8 [21/10/2015]
+ - Updated algorithms
+ - Fixed bugs
+ - Optimized
+ - Improved code
+ - Faster
+
 # 0.7 [16/10/2015]
  - Improved code 
  - Optimized
