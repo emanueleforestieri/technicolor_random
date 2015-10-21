@@ -64,7 +64,7 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 		if(contac(pass, characters[i])>3)
 			goto newpass;
 	
-	/*There can be no more than 5 characters A-F and 9 numbers*/
+	/*There can be no more than 5 characters A-F or 9 numbers*/
 	short charactersAF=0,numbers=0; /*counters*/
 	for(short i=0; i<10; i++)
 	{
