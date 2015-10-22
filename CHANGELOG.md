@@ -1,3 +1,6 @@
+# 0.8.1 [22/10/2015]
+ - Fixed bug
+
 # 0.8 [21/10/2015]
  - Updated algorithms
  - Fixed bugs
