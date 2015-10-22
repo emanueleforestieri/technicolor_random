@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <time.h>
 
 const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
 
