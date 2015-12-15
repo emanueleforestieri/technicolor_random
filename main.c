@@ -19,7 +19,6 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <time.h>
@@ -29,7 +28,7 @@ const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
 void ehelp(char *name) 
 {
 	fprintf(stderr, "Use: %s [password_number]\n", name);
-	exit(EXIT_FAILURE);
+	exit(1);
 }
 
 static inline short contac(register char *s,  char c) /*count how many times there is in the string s*/
@@ -68,12 +67,7 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 	/*There can be no more than 5 characters A-F or 9 numbers*/
 	short charactersAF=0,numbers=0; /*counters*/
 	for(short i=0; i<10; i++)
-	{
-		if((pass[i]>='A')&&(pass[i]<='F'))
-			charactersAF++;
-		else
-			numbers++;
-	}
+		(pass[i]>='A' && pass[i]<='F') ? charactersAF++ : numbers++;
 	if((charactersAF>5)||(numbers>9))
 		goto newpass;
 		
@@ -96,7 +90,7 @@ int main(int argc, char **argv)
 	if(errno)
 	{
 		perror("Error in the conversion of the number of password from string to ulong, strtoull()");
-		exit(EXIT_FAILURE);
+		exit(1);
 	}
 	
 	srand(time(NULL));
@@ -108,5 +102,5 @@ int main(int argc, char **argv)
 		generatepass(pass);
 		#endif	
 
-	return EXIT_SUCCESS;
+	return 0;
 }
