@@ -1,11 +1,11 @@
-# 0.9 [15/12/2015]
+# 1.1 [15/12/2015]
  - Improved code 
  - Optimized 
 
-# 0.8.1 [22/10/2015]
+# 1.0 [22/10/2015]
  - Fixed bug
 
-# 0.8 [21/10/2015]
+# 0.9 [21/10/2015]
  - Updated algorithms
  - Fixed bugs
  - Optimized
@@ -13,33 +13,33 @@
  - Improved comments
  - Improved code
 
-# 0.7 [16/10/2015]
+# 0.8 [16/10/2015]
  - Improved code 
  - Optimized
  - fully translated into english language
  
-# 0.6 [24/09/2015]
+# 0.7 [24/09/2015]
  - Improved code
  - Improved graphics
  - Optimized
 
-# 0.5 [13/09/2015]
+# 0.6 [13/09/2015]
  - Updated algorithms
  - Fixed bug
 
-# 0.4.2 [12/09/2015]
+# 0.5.2 [12/09/2015]
  - Fixed bug with gcc -O1/-O2/-O3
 
-# 0.4.1 [12/09/2015]
+# 0.5.1 [12/09/2015]
  - Fixed bug with the benchmark
 
-# 0.4 [12/09/2015]
+# 0.5 [12/09/2015]
  - Improved comments
  - Improved code
  - Errors stderr
  - Faster
  
-# 0.3.1 [11/09/2015]
+# 0.4.1 [11/09/2015]
  - Updated graphics
  - Optimized code
  - Added choice of passwords in stdin
@@ -47,12 +47,12 @@
  - Added comments
  - Fixed bug
 
-# 0.3 [11/09/2015]
+# 0.4 [11/09/2015]
  - Optimized code
  - Increased compatibility
  - Fixed bug
 
-# 0.2.1 [08/09/2015]
+# 0.3 [08/09/2015]
  - Fixed bug
 
 # 0.2 [06/09/2015]
