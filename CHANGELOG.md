@@ -1,3 +1,7 @@
+# 0.9 [15/12/2015]
+ - Improved code 
+ - Optimized 
+
 # 0.8.1 [22/10/2015]
  - Fixed bug
 
