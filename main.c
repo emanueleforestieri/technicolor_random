@@ -19,6 +19,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <time.h>
@@ -78,7 +79,7 @@ int main(int argc, char **argv)
 {
 	#define help() ehelp(*argv)
 	
-	unsigned long long passcnt=0, npass;
+	unsigned long long npass;
 	char pass[10+1]="xxxxxxxxxx";
 	
 	if (argc!=2)
@@ -95,7 +96,7 @@ int main(int argc, char **argv)
 	
 	srand(time(NULL));
 
-	for(; passcnt<npass; passcnt++)
+	for(unsigned long long passcnt=0; passcnt<npass; passcnt++)
 		#ifndef BENCHMARK
 		printf("%s\n", generatepass(pass));
 		#else
