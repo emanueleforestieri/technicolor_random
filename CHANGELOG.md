@@ -1,4 +1,4 @@
-# 1.2 [09/01/2016
+# 1.2 [09/01/2016]
  - Put back stdlib.h header
  - Fixed bug with exit()
  - Optimized with declaration of passcnt inside the for
