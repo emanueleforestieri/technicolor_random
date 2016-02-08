@@ -24,6 +24,8 @@
 #include <errno.h>
 #include <time.h>
 
+#define byte char
+
 const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
 
 void ehelp(char *name) 
@@ -32,9 +34,9 @@ void ehelp(char *name)
 	exit(1);
 }
 
-static inline short contac(register char *s,  char c) /*count how many times there is in the string s*/
+static inline byte contac(register char *s,  char c) /*count how many times there is in the string s*/
 {
-	short n=0;
+	byte n=0;
 	while(*s) if(*s++==c) n++;
 	return n;
 }
@@ -44,13 +46,13 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 
 	/*generating random string*/
 	newpass:;
-	for(short i=0; i<10; i++) /*pass[10] has to be '\0', should not be changed!*/
+	for(byte i=0; i<10; i++) /*pass[10] has to be '\0', should not be changed!*/
 		pass[i]=characters[rand()%16]; /*TODO: collo di bottiglia?*/
 
 	/*Check the generated password, FUNCTIONS ORDER FOR SPEED*/
 
 	/*There can be no more than two consecutive identical characters*/		    
-	for(short i=0; i<8; i++)
+	for(byte i=0; i<8; i++)
 	{
 		if(pass[i]==pass[i+1])
 		{
@@ -61,13 +63,13 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 	}
 	
 	/*There can be no more than three identical characters*/
-	for(short i=0; i<16; i++)
+	for(byte i=0; i<16; i++)
 		if(contac(pass, characters[i])>3)
 			goto newpass;
 	
 	/*There can be no more than 5 characters A-F or 9 numbers*/
 	short charactersAF=0,numbers=0; /*counters*/
-	for(short i=0; i<10; i++)
+	for(byte i=0; i<10; i++)
 		(pass[i]>='A' && pass[i]<='F') ? charactersAF++ : numbers++;
 	if((charactersAF>5)||(numbers>9))
 		goto newpass;
