@@ -1,3 +1,7 @@
+# 1.3 [03/02/2016]
+ - Added define for byte
+ - Optimized with byte
+
 # 1.2 [09/01/2016]
  - Put back stdlib.h header
  - Fixed bug with exit()
