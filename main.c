@@ -68,7 +68,7 @@ static inline char *generatepass(char *pass) /*It puts pass a valid password and
 			goto newpass;
 	
 	/*There can be no more than 5 characters A-F or 9 numbers*/
-	short charactersAF=0,numbers=0; /*counters*/
+	byte charactersAF=0,numbers=0; /*counters*/
 	for(byte i=0; i<10; i++)
 		(pass[i]>='A' && pass[i]<='F') ? charactersAF++ : numbers++;
 	if((charactersAF>5)||(numbers>9))
