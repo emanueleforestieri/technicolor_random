@@ -1,4 +1,4 @@
-# 1.3 [03/02/2016]
+# 1.3 [08/02/2016]
  - Added define for byte
  - Optimized with byte
 
