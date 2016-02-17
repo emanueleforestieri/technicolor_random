@@ -1,3 +1,7 @@
+# 1.3.1 [17/02/2016]
+ - Optimized with declaration inside the function
+ - Improved code with one macro inline and static function
+
 # 1.3 [08/02/2016]
  - Added define for byte
  - Optimized with byte
