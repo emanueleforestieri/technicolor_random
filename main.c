@@ -26,9 +26,7 @@
 
 #define byte char
 
-const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
-
-void ehelp(char *name) 
+static void ehelp(char *name) 
 {
 	fprintf(stderr, "Use: %s [password_number]\n", name);
 	exit(1);
@@ -41,9 +39,10 @@ static inline byte contac(register char *s,  char c) /*count how many times ther
 	return n;
 }
 
-static inline char *generatepass(char *pass) /*It puts pass a valid password and returns its address*/
+static char *generatepass(char *pass) /*It puts pass a valid password and returns its address*/
 {
-
+	static const char characters[]="0123456789ABCDEF"; /*usable characters in a password*/
+	
 	/*generating random string*/
 	newpass:;
 	for(byte i=0; i<10; i++) /*pass[10] has to be '\0', should not be changed!*/
